@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bitcon Ticker</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<style>
+    body
+    {
+        margin: 0;
+        background-color: #cbcbd4;
+    }
+    .tracking-in-expand-fwd-top{
+        position: absolute;
+        left: 35%;
+        top: 50px;
+        font-size: 70px;
+	-webkit-animation: tracking-in-expand-fwd-top 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand-fwd-top 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    }
+
+    
+    .card{
+        position: absolute;
+        border: 3px solid black;
+        margin-top:10%;
+        margin-left: 29%;
+        width: 40%;
+        background-color: #ee7b30;
+        animation: 1s ease-out 0s 1 slideInFromLeft;
+    }
+    .form-control{
+        background-color: #f9f7f7;
+    }
+
+    .form-group{
+        position: relative;
+        display:inline;
+        text-align: center;
+    }
+
+    @-webkit-keyframes tracking-in-expand-fwd-top {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(-500px);
+            transform: translateZ(-700px) translateY(-500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand-fwd-top {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(-500px);
+            transform: translateZ(-700px) translateY(-500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+</style>
+<body>
+    
+    <p class="tracking-in-expand-fwd-top">Bitcoin Ticker</p>
+
+    <form action="/" method="POST">
+        <div class="card">
+            <div class="form-group">
+                <label for="exampleFormControlSelect1" style="font-size: 25px; font-weight: bold;">Crypto Name</label>
+                    <select style="position: relative; width:50%;left: 25%;" name="crypto" class="form-control" id="exampleFormControlSelect1">
+                        <option value="BTC">Bitcoin</option>
+                        <option value="ETH">Ethereum</option>
+                        <option value="LTC">Litecoins</option>
+                    </select>
+            </div>
+            <div class="form-group">
+                    <label for="exampleFormControlSelect1" style="font-size: 25px; margin-top: 55px; font-weight: bold;">Fiat</label>
+                        <select style="position: relative; width:50%;left: 25%;" name="fiat" class="form-control" id="exampleFormControlSelect1">
+                            <option value="USD">Us dollar</option>
+                            <option value="GBP">GB pounds</option>
+                            <option value="EUR">Eu Euros</option>
+                        </select>
+            </div>
+            <button  style="margin-top: 55px; width: 70%;margin-left: 16%; font-size: 25px;" type="submit" class="btn btn-outline-success">Search</button>
+        </div>
+
+          
+    </form>
+
+
+</body>
+</html>
